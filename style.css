@@ -10,7 +10,9 @@ html,
 body {
     width: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -141,7 +143,7 @@ hr {
     flex-direction: column;
     gap: 5px;
     margin-top: 3%;
-    width: 100vh;
+    width: min(95%, 800px);
     height: auto;
     padding: 1vh;
     background-color: bisque;
@@ -468,20 +470,63 @@ hr {
 @media (max-width: 800px) {
     body {
         padding: 8px;
+        justify-content: flex-start; /* tránh tràn khi nội dung dài */
+        padding-top: 16px;
+    }
+
+    .content-email {
+        min-height: 92dvh;
+        padding: 20px;
     }
 
     .click-effect {
-        padding: 6px;
+        padding: 10px 6px;
         border-radius: 6px;
+        min-height: 92dvh;
     }
 
-    .boxTyping{
-        width: 90%;
+    .btn-mail {
+        width: clamp(120px, 45vw, 200px);
+        height: clamp(90px, 32vw, 140px);
+        border-radius: 20px;
+    }
+
+    .boxTyping {
+        width: 100%;
+        margin-top: 12px;
+        padding: 12px;
+    }
+
+    .boxTyping .ttbox {
+        font-size: clamp(1.1rem, 5vw, 1.6rem);
+        text-align: center;
+    }
+
+    .txtContent {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .box {
+        width: min(70vw, 220px);
+        height: min(70vw, 220px);
+        margin: 8px auto !important;
+    }
+    .a1 { margin-left: 0 !important; }
+    .boxTyping.done .a2 { margin-left: 0 !important; }
+    .a3 { margin-left: 0 !important; }
+
+    .btn-container {
+        width: 95%;
+        min-height: 70px;
+        margin-top: 15px;
+        font-size: 1rem;
     }
 
     .container {
         width: 100%;
-        padding: 10px;
+        padding: 12px;
+        min-height: auto;
     }
 
     .main-title {
@@ -490,27 +535,30 @@ hr {
     }
 
     .title {
-        font-size: clamp(1.6rem, 10vw, 3rem);
+        font-size: clamp(1.8rem, 9vw, 3rem);
         -webkit-text-stroke: 1px black;
     }
 
-    .btn-container {
+    .img-person {
         width: 95%;
-        min-height: 80px;
-        margin-top: 10px;
+        max-width: 340px;
+        max-height: none;
+        margin-top: 40px;
+        aspect-ratio: 3 / 4;
     }
 
-    .img-person {
-        width: 100%;
-        max-height: 300px;
+    .img-content {
+        height: 100%;
     }
+
+    .kf { transform: rotateY(0deg)   translateZ(150px); }
+    .kb { transform: rotateY(180deg) translateZ(150px); }
+    .kl { transform: rotateY(-90deg) translateZ(150px); }
+    .kr { transform: rotateY(90deg)  translateZ(150px); }
 
     .animation-cake {
-        width: 80%;
-    }
-
-    .btn-mail {
-        width: 70px;
-        height: 32px;
+        width: 70%;
+        max-width: 260px;
+        margin-top: 20px;
     }
 }
