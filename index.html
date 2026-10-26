@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="main.js"></script>
+    <audio src="audio/Happy Birthday Piano Easy Hùng Music.mp3" id="bgMusic"></audio>
+    <div class="content-email" id="contentEmail">
+        <button class="btn-mail" id="btn_mail" onclick="openBlockTitle()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope"
+                viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13
+   2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1
+    11.105l4.708-2.897L1 5.383z" />
+            </svg>
+        </button>
+    </div>
+
+
+
+    <div class="click-effect" id="block-title">
+
+        <div class="boxTyping">
+            <h1 class="ttbox">
+                Lời chúc mừng sinh nhật!
+            </h1>
+            <hr>
+            <p class="txtContent" id="txtTyping"></p>
+            <hr>
+            <div class="boxImg">
+                <img src="img/qn4.jpg" alt="box1" class="box a1" id="a1">
+                <img src="img/qn5.jpg" alt="box2" class="box a2" id="a2">
+                <img src="img/qn6.jpg" alt="box3" class="box a3" id="a3">
+            </div>
+
+        </div>
+
+
+        <button onclick="openContainer()" class="btn-container">
+            Tiếp tục 🧨
+        </button>
+    </div>
+
+    <div class="container" id="clickContainer">
+        <div class="main-title">
+            <h1 class="title">Happy Birthday</h1>
+
+        </div>
+
+        <div class="img-person">
+
+            <div class="img-content kf">
+                <img src="img/qn0.jpg" alt="img1">
+            </div>
+
+            <div class="img-content kb">
+                <img src="img/qn1.jpg" alt="img2">
+            </div>
+
+            <div class="img-content kl">
+                <img src="img/qn2.jpg" alt="img3">
+            </div>
+
+            <div class="img-content kr">
+                <img src="img/qn3.jpg" alt="img4">
+            </div>
+
+        </div>
+
+
+
+        <div class="animation-cake">
+            <img src="img/cake_612x612-removebg.png" alt="imgcake">
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
