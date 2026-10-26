@@ -1,0 +1,512 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-color: deeppink;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+hr {
+    height: 3px;
+    background-color: black;
+}
+
+.click-effect.show {
+    display: flex;
+}
+
+.click-effect {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1700px;
+    min-height: 90vh;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 9px;
+    transition: transform 0.3s ease;
+}
+
+.click-effect.hidden {
+    display: none;
+}
+
+.click-effect:active {
+    transform: translateY(20px);
+}
+
+.btn-container {
+    margin: 5px;
+    width: min(50%, 140px);
+    height: auto;
+    min-height: 90px;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: antiquewhite;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 3%;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.a1 {
+    display: flex;
+    margin-left: 10%;
+}
+
+.boxTyping.done .a1 {
+    animation: showA1 0.8s ease 0.2s forwards;
+}
+
+.boxTyping.done .a2 {
+    margin-left: 60%;
+    animation: showA2 0.8s ease 0.7s forwards;
+}
+
+.boxTyping.done .a3 {
+    animation: showA3 0.8s ease 1.2s forwards;
+}
+
+.container.show {
+    display: flex;
+    animation: kf_openContainer 3s ease forwards;
+}
+
+.container.hidden {
+    display: none;
+}
+
+.container {
+    display: none;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1500px;
+    height: auto;
+    min-height: 95%;
+    background-color: bisque;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 7px;
+
+}
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    padding: 10px 0;
+    transform: translateY(15px);
+}
+
+.title {
+    font-size: 90px;
+    -webkit-text-stroke: 2px black;
+    animation: titleAnima 3s infinite;
+    text-align: center;
+    word-break: break-word;
+}
+
+.boxTyping {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 3%;
+    width: 100vh;
+    height: auto;
+    padding: 1vh;
+    background-color: bisque;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.content-email.show {
+    display: flex;
+}
+
+.content-email.hidden {
+    display: none;
+}
+
+.content-email {
+    display: flex;
+    background-color: rgba(24, 24, 23, 0.584);
+    flex-direction: column;
+    width: 100%;
+    max-width: 1700px;
+    min-height: 90vh;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 9px;
+}
+
+
+.btn-mail {
+    width: 300px;
+    height: 200px;
+    background-color: burlywood;
+    border-radius: 30px;
+    border: 1px solid black;
+    transition: 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    animation: mailFloat 3s ease-in-out infinite;
+}
+
+.btn-mail::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn-mail.ripple::after {
+    animation: rippleEffect 0.6s ease-out;
+}
+
+@keyframes rippleEffect {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.8;
+    }
+
+    100% {
+        width: 400px;
+        height: 400px;
+        opacity: 0;
+    }
+}
+
+.content-email.opening {
+    animation: mailOpen 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+}
+
+.btn-mail svg {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-mail:hover {
+    background-color: aquamarine;
+    color: brown;
+    transform: translateY(-10px);
+}
+
+.img-person {
+    margin-top: 90px;
+    width: 90%;
+    max-width: 500px;
+    aspect-ratio: 3 / 4;
+    border-radius: 9px;
+    transform-style: preserve-3d;
+    position: relative;
+    animation-name: animation-frame;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.img-content {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 90%;
+    background-color: aliceblue;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 2px;
+
+}
+
+.img-content img {
+    width: 100%;
+    height: 100%;
+    backface-visibility: visible;
+}
+
+@keyframes showA1 {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px) scale(0.5) rotate(-15deg);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(10px) scale(1.05) rotate(5deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+}
+
+@keyframes showA2 {
+    0% {
+        opacity: 0;
+        transform: translateX(150px) scale(0.5) rotate(20deg);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateX(-10px) scale(1.05) rotate(-5deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1) rotate(0deg);
+    }
+}
+
+@keyframes showA3 {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px) scale(0.5) rotate(-20deg);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateX(10px) scale(1.05) rotate(5deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1) rotate(0deg);
+    }
+}
+
+/* img3D */
+.kf { transform: rotateY(0deg) translateZ(300px)}
+
+.kb { transform: rotateY(180deg) translateZ(300px)}
+
+.kl { transform: rotateY(-90deg) translateZ(300px)}
+
+.kr { transform: rotateY(90deg) translateZ(300px)}
+
+.animation-cake {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(60%, 312px);
+    height: auto;
+    max-height: 312px;
+    aspect-ratio: 1 / 1;
+}
+
+.animation-cake img {
+    animation: anima_Cake 1.8s infinite;
+    animation-direction: alternate-reverse;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes mailOpen {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0) rotate(0deg);
+    }
+
+    40% {
+        opacity: 1;
+        transform: scale(1.15) translateY(-30px) rotate(-3deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(2.5) translateY(-200px) rotate(8deg);
+        pointer-events: none;
+    }
+}
+
+@keyframes boxReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) rotate(-5deg);
+        filter: blur(8px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.05) rotate(1deg);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes mailFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes kf_openContainer {
+    from {
+        opacity: 0;
+        transform: scale(1.2) translateY(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.0) translateY(0px);
+    }
+}
+
+@keyframes titleAnima {
+    0% {
+        color: brown;
+        transform: translateX(20px) translateY(-20px);
+    }
+
+    25% {
+        color: blueviolet;
+        transform: translateX(-20px) translateY(20px);
+    }
+
+    50% {
+        color: blue;
+        transform: translateX(-20px) translateY(-20px);
+    }
+
+    75% {
+        color: aquamarine;
+        transform: translateX(20px) translateY(-20px);
+    }
+
+    100% {
+        color: coral;
+        transform: translateX(20px) translateY(-20px);
+    }
+}
+
+@keyframes animation-frame {
+    from {
+        transform: rotateX(-5deg) rotateY(0deg);
+
+    }
+
+    to {
+        transform: rotateX(-5deg) rotateY(360deg);
+
+    }
+}
+
+@keyframes anima_Cake {
+    from {
+        transform: translateY(-20px);
+    }
+
+    to {
+        transform: translateY(20px);
+    }
+}
+
+@media (max-width: 992px) {
+    .main-title {
+        width: 90%;
+    }
+
+    .img-person {
+        width: 90%;
+    }
+
+    .btn-container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 8px;
+    }
+
+    .click-effect {
+        padding: 6px;
+        border-radius: 6px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .main-title {
+        width: 100%;
+        transform: translateY(5px);
+    }
+
+    .title {
+        font-size: clamp(1.6rem, 10vw, 3rem);
+        -webkit-text-stroke: 1px black;
+    }
+
+    .btn-container {
+        width: 95%;
+        min-height: 80px;
+        margin-top: 10px;
+    }
+
+    .img-person {
+        width: 100%;
+        max-height: 300px;
+    }
+
+    .animation-cake {
+        width: 80%;
+    }
+
+    .btn-mail {
+        width: 70px;
+        height: 32px;
+    }
+}
