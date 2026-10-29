@@ -317,13 +317,21 @@ hr {
 }
 
 /* img3D */
-.kf { transform: rotateY(0deg) translateZ(300px)}
+.kf {
+    transform: rotateY(0deg) translateZ(300px)
+}
 
-.kb { transform: rotateY(180deg) translateZ(300px)}
+.kb {
+    transform: rotateY(180deg) translateZ(300px)
+}
 
-.kl { transform: rotateY(-90deg) translateZ(300px)}
+.kl {
+    transform: rotateY(-90deg) translateZ(300px)
+}
 
-.kr { transform: rotateY(90deg) translateZ(300px)}
+.kr {
+    transform: rotateY(90deg) translateZ(300px)
+}
 
 .animation-cake {
     display: flex;
@@ -467,10 +475,11 @@ hr {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     body {
         padding: 8px;
-        justify-content: flex-start; /* tránh tràn khi nội dung dài */
+        justify-content: flex-start;
+        /* tránh tràn khi nội dung dài */
         padding-top: 16px;
     }
 
@@ -512,9 +521,18 @@ hr {
         height: min(70vw, 220px);
         margin: 8px auto !important;
     }
-    .a1 { margin-left: 0 !important; }
-    .boxTyping.done .a2 { margin-left: 0 !important; }
-    .a3 { margin-left: 0 !important; }
+
+    .a1 {
+        margin-left: 10px !important;
+    }
+
+    .boxTyping.done .a2 {
+        margin-left: 100px !important;
+    }
+
+    .a3 {
+        margin-left: 0 !important;
+    }
 
     .btn-container {
         width: 95%;
@@ -551,10 +569,21 @@ hr {
         height: 100%;
     }
 
-    .kf { transform: rotateY(0deg)   translateZ(150px); }
-    .kb { transform: rotateY(180deg) translateZ(150px); }
-    .kl { transform: rotateY(-90deg) translateZ(150px); }
-    .kr { transform: rotateY(90deg)  translateZ(150px); }
+    .kf {
+        transform: rotateY(0deg) translateZ(150px);
+    }
+
+    .kb {
+        transform: rotateY(180deg) translateZ(150px);
+    }
+
+    .kl {
+        transform: rotateY(-90deg) translateZ(150px);
+    }
+
+    .kr {
+        transform: rotateY(90deg) translateZ(150px);
+    }
 
     .animation-cake {
         width: 70%;
@@ -566,12 +595,8 @@ hr {
 /* 
    iPHONE 15 (393×852)
     */
-@media only screen 
-    and (min-device-width: 390px) 
-    and (max-device-width: 400px)
-    and (-webkit-min-device-pixel-ratio: 3) 
-    and (orientation: portrait) {
-    
+@media only screen and (min-device-width: 390px) and (max-device-width: 400px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+
     body {
         padding-top: max(14px, env(safe-area-inset-top));
         padding-bottom: max(14px, env(safe-area-inset-bottom));
@@ -620,7 +645,14 @@ hr {
     .box {
         width: 230px;
         height: 230px;
-        margin: 10px auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .boxTyping.done .a2 {
+        margin-left: auto !important;
     }
 
     .btn-container {
@@ -630,7 +662,6 @@ hr {
         margin-top: 16px;
     }
 
-    /* Container quà */
     .container {
         width: 100%;
         padding: 14px;
@@ -649,10 +680,21 @@ hr {
         aspect-ratio: 3 / 4;
     }
 
-    .kf { transform: rotateY(0deg)   translateZ(155px); }
-    .kb { transform: rotateY(180deg) translateZ(155px); }
-    .kl { transform: rotateY(-90deg) translateZ(155px); }
-    .kr { transform: rotateY(90deg)  translateZ(155px); }
+    .kf {
+        transform: rotateY(0deg) translateZ(155px);
+    }
+
+    .kb {
+        transform: rotateY(180deg) translateZ(155px);
+    }
+
+    .kl {
+        transform: rotateY(-90deg) translateZ(155px);
+    }
+
+    .kr {
+        transform: rotateY(90deg) translateZ(155px);
+    }
 
     .animation-cake {
         width: 200px;
@@ -662,12 +704,8 @@ hr {
 }
 
 /* iPhone 15 — landscape (852×393) */
-@media only screen 
-    and (min-device-width: 390px) 
-    and (max-device-width: 400px)
-    and (-webkit-min-device-pixel-ratio: 3) 
-    and (orientation: landscape) {
-    
+@media only screen and (min-device-width: 390px) and (max-device-width: 400px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+
     body {
         padding: 8px;
         justify-content: flex-start;
@@ -689,10 +727,21 @@ hr {
         margin-top: 16px;
     }
 
-    .kf { transform: rotateY(0deg)   translateZ(105px); }
-    .kb { transform: rotateY(180deg) translateZ(105px); }
-    .kl { transform: rotateY(-90deg) translateZ(105px); }
-    .kr { transform: rotateY(90deg)  translateZ(105px); }
+    .kf {
+        transform: rotateY(0deg) translateZ(105px);
+    }
+
+    .kb {
+        transform: rotateY(180deg) translateZ(105px);
+    }
+
+    .kl {
+        transform: rotateY(-90deg) translateZ(105px);
+    }
+
+    .kr {
+        transform: rotateY(90deg) translateZ(105px);
+    }
 
     .title {
         font-size: 1.8rem;
@@ -706,10 +755,7 @@ hr {
 /* 
     (393×873 hoặc 412×915, Android)
  */
-@media only screen 
-    and (min-device-width: 390px) 
-    and (max-device-width: 420px)
-    and (orientation: portrait) {
+@media only screen and (min-device-width: 390px) and (max-device-width: 420px) and (orientation: portrait) {
 
     body {
         padding: 12px;
@@ -787,10 +833,21 @@ hr {
         aspect-ratio: 3 / 4;
     }
 
-    .kf { transform: rotateY(0deg)   translateZ(165px); }
-    .kb { transform: rotateY(180deg) translateZ(165px); }
-    .kl { transform: rotateY(-90deg) translateZ(165px); }
-    .kr { transform: rotateY(90deg)  translateZ(165px); }
+    .kf {
+        transform: rotateY(0deg) translateZ(165px);
+    }
+
+    .kb {
+        transform: rotateY(180deg) translateZ(165px);
+    }
+
+    .kl {
+        transform: rotateY(-90deg) translateZ(165px);
+    }
+
+    .kr {
+        transform: rotateY(90deg) translateZ(165px);
+    }
 
     .animation-cake {
         width: 210px;
@@ -803,10 +860,7 @@ hr {
     }
 }
 
-@media only screen 
-    and (min-device-width: 390px) 
-    and (max-device-width: 420px)
-    and (orientation: landscape) {
+@media only screen and (min-device-width: 390px) and (max-device-width: 420px) and (orientation: landscape) {
 
     body {
         padding: 8px;
@@ -829,10 +883,21 @@ hr {
         margin-top: 16px;
     }
 
-    .kf { transform: rotateY(0deg)   translateZ(110px); }
-    .kb { transform: rotateY(180deg) translateZ(110px); }
-    .kl { transform: rotateY(-90deg) translateZ(110px); }
-    .kr { transform: rotateY(90deg)  translateZ(110px); }
+    .kf {
+        transform: rotateY(0deg) translateZ(110px);
+    }
+
+    .kb {
+        transform: rotateY(180deg) translateZ(110px);
+    }
+
+    .kl {
+        transform: rotateY(-90deg) translateZ(110px);
+    }
+
+    .kr {
+        transform: rotateY(90deg) translateZ(110px);
+    }
 
     .title {
         font-size: 1.9rem;
