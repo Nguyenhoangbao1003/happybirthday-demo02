@@ -805,9 +805,14 @@ hr {
     .box {
         width: 240px;
         height: 240px;
-        margin: 10px auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
     }
-
+    .boxTyping.done .a2 {
+        margin-left: 200px auto !important;
+    }
     .btn-container {
         width: 92%;
         min-height: 68px;
