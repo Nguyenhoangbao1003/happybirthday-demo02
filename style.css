@@ -65,23 +65,27 @@ hr {
     border-radius: 15px;
     background-color: antiquewhite;
 }
-
-.box {
+.boxImg {
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
-    border-radius: 3%;
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    gap: 12px;
+    width: 100%;
+    flex: 1;
+}
+.boxImg .box {
+    margin: 0;
 }
 
 .a1 {
-    display: flex;
     align-self: flex-start;
-    margin-left: 10%;
+}
+
+.a2 {
+    align-self: flex-end;
+}
+
+.a3 {
+    align-self: flex-start;
 }
 
 .boxTyping.done .a1 {
@@ -89,17 +93,10 @@ hr {
 }
 
 .boxTyping.done .a2 {
-    align-self: flex-end;
-    margin-right: 0%;
-    margin-left: 50%;
     animation: showA2 0.8s ease 0.7s forwards;
 }
 
 .boxTyping.done .a3 {
-    align-self: flex-start;
-    margin-left: 10%;
-    margin-top: auto;
-    margin-bottom: 0;
     animation: showA3 0.8s ease 1.2s forwards;
 }
 
@@ -528,7 +525,6 @@ hr {
     .box {
         width: min(70vw, 220px);
         height: min(70vw, 220px);
-        margin: 8px 0 auto !important;
     }
 
     .a1 {
