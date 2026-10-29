@@ -75,7 +75,8 @@ hr {
 .boxImg .box {
     margin: 0;
     overflow: hidden;
-    height: 340px;
+    height: 300px;
+    width: 300px;
 }
 
 .a1 {
