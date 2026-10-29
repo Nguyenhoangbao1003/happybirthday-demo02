@@ -74,29 +74,37 @@ hr {
 }
 .boxImg .box {
     margin: 0;
+    overflow: hidden;
+    height: 340px;
 }
 
 .a1 {
+    display: none;
     align-self: flex-start;
 }
 
 .a2 {
+    display: none;
     align-self: flex-end;
 }
 
 .a3 {
+    display: none;
     align-self: flex-start;
 }
 
 .boxTyping.done .a1 {
+    display: block;
     animation: showA1 0.8s ease 0.2s forwards;
 }
 
 .boxTyping.done .a2 {
+     display: block;
     animation: showA2 0.8s ease 0.7s forwards;
 }
 
 .boxTyping.done .a3 {
+     display: block;
     animation: showA3 0.8s ease 1.2s forwards;
 }
 
