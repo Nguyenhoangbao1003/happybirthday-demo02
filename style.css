@@ -528,7 +528,7 @@ hr {
     .box {
         width: min(70vw, 220px);
         height: min(70vw, 220px);
-        margin: 8px auto !important;
+        margin: 8px 0 auto !important;
     }
 
     .a1 {
@@ -662,10 +662,7 @@ hr {
     .box {
         width: 230px;
         height: 230px;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        margin-top: 10px !important;
-        margin-bottom: 10px !important;
+        margin: 10px 0 !important;
     }
 
     .a1 {
@@ -962,8 +959,9 @@ hr {
     .animation-cake {
         width: 170px;
     }
-
-    @media only screen and (min-device-width: 390px) and (max-device-width: 400px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape),
+ 
+}
+@media only screen and (min-device-width: 390px) and (max-device-width: 400px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape),
     only screen and (min-device-width: 390px) and (max-device-width: 420px) and (orientation: landscape) {
         .a1 {
             align-self: flex-start;
@@ -983,4 +981,3 @@ hr {
             margin-bottom: 0 !important;
         }
     }
-}
