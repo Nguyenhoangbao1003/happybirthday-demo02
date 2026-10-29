@@ -80,6 +80,7 @@ hr {
 
 .a1 {
     display: flex;
+    align-self: flex-start;
     margin-left: 10%;
 }
 
@@ -88,11 +89,17 @@ hr {
 }
 
 .boxTyping.done .a2 {
-    margin-left: 50%;
+    align-self: flex-end;
+    margin-right: 10%;
+    margin-left: 0;
     animation: showA2 0.8s ease 0.7s forwards;
 }
 
 .boxTyping.done .a3 {
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-top: auto;
+    margin-bottom: 0;
     animation: showA3 0.8s ease 1.2s forwards;
 }
 
@@ -522,15 +529,23 @@ hr {
     }
 
     .a1 {
-        margin-left: 10px !important;
+        align-self: flex-start;
+        margin-left: 6px !important;
+        margin-right: 0 !important;
     }
 
     .boxTyping.done .a2 {
-        margin-left: 100px !important;
+        align-self: flex-end;
+        margin-left: 0 !important;
+        margin-right: 6px !important;
     }
 
     .a3 {
-        margin-left: 0 !important;
+        align-self: flex-start;
+        margin-left: 6px !important;
+        margin-right: 0 !important;
+        margin-top: auto !important;
+        margin-bottom: 0 !important;
     }
 
     .btn-container {
@@ -650,9 +665,24 @@ hr {
         margin-bottom: 10px !important;
     }
 
-    .boxTyping.done .a2 {
-        margin-left: 60% !important;
+    .a1 {
+        align-self: flex-start;
+        margin-left: 0 !important;
         margin-right: 0 !important;
+    }
+
+    .boxTyping.done .a2 {
+        align-self: flex-end;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .boxTyping.done .a3 {
+        align-self: flex-start;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: auto !important;
+        margin-bottom: 0 !important;
     }
 
     .btn-container {
@@ -810,10 +840,27 @@ hr {
         margin-top: 10px !important;
         margin-bottom: 10px !important;
     }
-    .boxTyping.done .a2 {
-        margin-left: 60% !important;
+
+    .a1 {
+        align-self: flex-start;
+        margin-left: 0 !important;
         margin-right: 0 !important;
     }
+
+    .boxTyping.done .a2 {
+        align-self: flex-end;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .boxTyping.done .a3 {
+        align-self: flex-start;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: auto !important;
+        margin-bottom: 0 !important;
+    }
+
     .btn-container {
         width: 92%;
         min-height: 68px;
@@ -911,5 +958,26 @@ hr {
 
     .animation-cake {
         width: 170px;
+    }
+
+    @media only screen and (min-device-width: 390px) and (max-device-width: 400px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape),
+    only screen and (min-device-width: 390px) and (max-device-width: 420px) and (orientation: landscape) {
+        .a1 {
+            align-self: flex-start;
+            margin-left: 4px !important;
+        }
+
+        .boxTyping.done .a2 {
+            align-self: flex-end;
+            margin-left: 0 !important;
+            margin-right: 4px !important;
+        }
+
+        .boxTyping.done .a3 {
+            align-self: flex-start;
+            margin-left: 4px !important;
+            margin-top: auto !important;
+            margin-bottom: 0 !important;
+        }
     }
 }
