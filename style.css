@@ -90,8 +90,8 @@ hr {
 
 .boxTyping.done .a2 {
     align-self: flex-end;
-    margin-right: 10%;
-    margin-left: 0;
+    margin-right: 0%;
+    margin-left: 50%;
     animation: showA2 0.8s ease 0.7s forwards;
 }
 
@@ -539,7 +539,7 @@ hr {
 
     .boxTyping.done .a2 {
         align-self: flex-end;
-        margin-left: 0 !important;
+        /* margin-left: 0 !important; */
         margin-right: 6px !important;
     }
 
@@ -673,7 +673,7 @@ hr {
 
     .boxTyping.done .a2 {
         align-self: flex-end;
-        margin-left: 0 !important;
+        /* margin-left: 0 !important; */
         margin-right: 0 !important;
     }
 
@@ -849,7 +849,7 @@ hr {
 
     .boxTyping.done .a2 {
         align-self: flex-end;
-        margin-left: 0 !important;
+        /* margin-left: 0 !important; */
         margin-right: 0 !important;
     }
 
